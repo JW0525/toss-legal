@@ -1,0 +1,48 @@
+/* 매일 두뇌퀴즈 약관 페이지 공통 스타일.
+   토스 로그인 동의 화면의 웹뷰에서 열리므로 라이트 모드로 고정합니다. */
+:root {
+  color-scheme: light;
+  --ink: #191f28;
+  --sub: #6b7684;
+  --line: #e5e8eb;
+  --accent: #3182f6;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 24px 20px 64px;
+  background: #fff;
+  color: var(--ink);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Pretendard", "Malgun Gothic", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  word-break: keep-all;
+}
+main { max-width: 720px; margin: 0 auto; }
+h1 { font-size: 24px; line-height: 1.35; letter-spacing: -0.5px; margin: 0 0 8px; }
+h2 {
+  font-size: 18px; letter-spacing: -0.3px; margin: 40px 0 12px;
+  padding-top: 24px; border-top: 1px solid var(--line);
+}
+h2:first-of-type { border-top: 0; padding-top: 0; }
+h3 { font-size: 16px; margin: 24px 0 8px; }
+p, li { color: var(--ink); }
+ul, ol { padding-left: 20px; margin: 12px 0; }
+li { margin: 6px 0; }
+.meta { color: var(--sub); font-size: 14px; margin: 0 0 32px; }
+.note {
+  background: #f2f4f6; border-radius: 12px; padding: 16px 18px;
+  margin: 16px 0; font-size: 15px;
+}
+.todo {
+  background: #fff4e6; border: 1px solid #ffd8a8; border-radius: 12px;
+  padding: 16px 18px; margin: 16px 0; font-size: 15px;
+}
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+th { background: #f9fafb; font-weight: 600; }
+a { color: var(--accent); }
+footer {
+  margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line);
+  color: var(--sub); font-size: 14px;
+}
