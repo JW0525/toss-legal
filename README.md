@@ -16,11 +16,22 @@ https://jw0525.github.io/toss-legal/<appName>/privacy.html
 toss-legal/
 ├── index.html          앱 목록
 ├── style.css           공통 스타일 (모바일·라이트 모드 고정)
-└── dailybrain/         매일 두뇌퀴즈
+├── dailybrain/         매일 두뇌퀴즈 (토스 로그인 씀)
+│   ├── index.html
+│   ├── terms.html      서비스 이용약관
+│   └── privacy.html    개인정보 수집·이용 동의
+└── tarot-answer/       타로 한 장의 답 (로그인 없음)
     ├── index.html
     ├── terms.html      서비스 이용약관
-    └── privacy.html    개인정보 수집·이용 동의
+    └── privacy.html    개인정보 처리방침
 ```
+
+**앱마다 문서 이름이 다를 수 있습니다.** 토스 로그인을 쓰면 이름을 동의받으므로
+「개인정보 수집·이용 **동의**」가 되고, 로그인이 없으면 동의받을 게 없어
+「개인정보 **처리방침**」입니다. 앱이 실제로 하는 일에 맞추세요.
+
+⚠️ **앱 안의 글과 이 페이지는 같은 말이어야 합니다.** 두 곳이 다르면 심사에서 걸려요.
+타로는 `applications/tarot/src/lib/legal.ts` 가 원본입니다 — 거기를 고치면 여기도 같이 고치세요.
 
 **앱을 추가할 때는 `appName` 으로 폴더를 만들고** `dailybrain/` 을 복사해서 고치세요.
 `style.css` 는 루트 하나를 공유하므로 앱 폴더에서는 `../style.css` 로 참조합니다.
