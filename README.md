@@ -20,6 +20,10 @@ toss-legal/
 │   ├── index.html
 │   ├── terms.html      서비스 이용약관
 │   └── privacy.html    개인정보 수집·이용 동의
+├── ssukgarden/         쑥쑥가든 (토스 로그인 씀 · 꿀 → 포인트 교환)
+│   ├── index.html
+│   ├── terms.html      서비스 이용약관
+│   └── privacy.html    개인정보 수집·이용 동의
 └── tarot-answer/       타로 한 장의 답 (로그인 없음)
     ├── index.html
     ├── terms.html      서비스 이용약관
