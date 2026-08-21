@@ -1,0 +1,46 @@
+name: Deploy compatibility pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Prepare static files
+        run: |
+          mkdir _site
+          rsync -a ./ _site/ \
+            --exclude .ai \
+            --exclude .git \
+            --exclude .github \
+            --exclude _site \
+            --exclude AGENTS.md \
+            --exclude CLAUDE.md \
+            --exclude README.md \
+            --exclude tools
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
