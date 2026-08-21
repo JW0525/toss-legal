@@ -40,7 +40,6 @@ https://jw0525.github.io/toss-legal/<appName>/privacy.html
 node tools/build-legacy-redirects.mjs
 ```
 
-`birthday-chemistry/`는 현재 42개 앱과 연결되지 않는 종료된 서비스의 기록이라 자동 변환에서
-제외합니다. 새 앱의 법적 문서는 이 저장소에 추가하지 않습니다.
+새 앱의 법적 문서는 이 저장소에 추가하지 않습니다.
 
 약관 내용을 바꿀 때는 `goyo-site` 원본과 시행일을 고친 뒤 생성·검사·배포합니다.

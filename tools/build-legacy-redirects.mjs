@@ -9,11 +9,9 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const ARCHIVED = new Set(['birthday-chemistry']);
 const slugs = readdirSync(ROOT, { withFileTypes: true })
   .filter((entry) => entry.isDirectory() && !entry.name.startsWith('.') && entry.name !== 'tools')
   .map((entry) => entry.name)
-  .filter((slug) => !ARCHIVED.has(slug))
   .sort();
 
 function redirectPage(target, label) {
